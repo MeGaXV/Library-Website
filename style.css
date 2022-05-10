@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: sans-serif;
+    border-left: 4px solid #1abc9c;
+    margin: 10px;
+}
+.container{
+    width: 96%;
+    margin: 20px auto;
+}
+
+.book{
+    width: 48%;
+    float: left;
+    background: #fff;
+    margin: 5px;
+    padding: 10px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.icon{
+    width: 15%;
+    float: left;
+}
+
+button{
+    background:#1abc9c;
+    border-radius: 8px;
+    padding: 6px;
+    float: right;
+    cursor: pointer;
+}
