@@ -47,7 +47,7 @@
     background: #009688;
     position: absolute;
     left: 0;
-    bottom: -10;
+    bottom: -5px;
     transition:0.5s;
 }
 
