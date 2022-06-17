@@ -1,0 +1,56 @@
+body{
+    background-color: #E3D1DA;
+}
+#details {
+    line-height: 32px;
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 36px;
+    color: white;
+    width: 80%;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: 600;
+    border-color: #00297A;
+    border-radius: 4px;
+    border: 1px solid black;
+    border-style: solid;
+    background-color: #283342;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.12), 0 5px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    padding: 10px;
+    font-family: Calibri;
+    
+}
+#image{
+    min-width:fit-content;
+    height: auto;
+
+}
+#cover{
+    width:300px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    
+    
+}
+#abs{
+    justify-content: space-evenly;
+    height:auto;
+    position:relative;
+    top:10%;
+}
+
+#abstract{
+    text-align: justify;
+    align-self: center;
+}
+#bookTitle{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
