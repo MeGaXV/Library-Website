@@ -26,12 +26,11 @@
     border-style: solid;
     background-color: #283342;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.12), 0 5px 4px rgba(0, 0, 0, 0.24);
-    display: flex;
     padding: 10px;
     font-family: Calibri;
     text-align: center;
 }
-#cover{
+.cover{
     width:300px;
 }
 .text{
