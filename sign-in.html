@@ -26,22 +26,23 @@
 				<div class="title">
 					<p style="color: #333;">Sign in to our library</p>
 				</div>
-				<form>
+				<form action="homepage.html">
 					
 				<div class="input_field">
-					<label>Username or email address</label>
-					<input type="text" class="input">
+					<label>email address</label>
+					<input type="email" class="input" placeholder="email" id="email" required>
 				</div>
 				<div class="input_field">
 					<label>Password</label>
-					<input type="password" class="input">
+					<input type="password" class="input"placeholder="Password" required>
 				</div>
 				<div>
 					<a href="#" class="forgot">Forgot password?</a>
 				</div>
 				<div class="btn">
-					<input type="submit" value="Sign in" class="sign_btn">
+					<input type="submit" value="Sign in" class="sign_btn" id="btn">
 					<p><br><br></p>
+					</a>
 				</div>
 			</form>
 			<div class="create_act">
@@ -54,6 +55,30 @@
 			
 		</div>	
 		
+		<script>
+			let email = [];
+			
+			const addemail = (ev)=>{
+				ev.preventDefault();  //to stop the form submitting
+				let email = {
+					
+					email: document.getElementById('email').value,
+					
+				}
+				
+				document.forms[0].reset(); // to clear the form for the next entries
+				//document.querySelector('form').reset();
+	
+				console.warn('added' , {email} );
+
+				//saving to localStorage
+				localStorage.setItem('MyemailList', JSON.stringify(email) );
+			}
+			document.addEventListener('DOMContentLoaded', ()=>{
+				document.getElementById('btn').addEventListener('click', addemail);
+			});
+			
+		</script>
 		</body>
 		</html>
 		
