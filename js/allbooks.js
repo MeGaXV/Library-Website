@@ -20,6 +20,17 @@ for(i=0; i<list.length; i++){
         button.setAttribute("type","button")
         button.setAttribute("value","Read More")
         button.style.cursor = "pointer"
+        button.style.width="200px"
+        button.style.padding= "15px 0"
+        button.style.textAlign= "center"
+        button.style.margin= "20px 10px"
+        button.style.borderRadius= "25px"
+        button.style.fontWeight= "bold"
+        button.style.border= "2px solid #009688"
+        button.style.background= "transparent"
+        button.style.color= "white"
+        button.style.position= "relative"
+        button.style.backgroundColor="#009688"
         button.setAttribute("onclick","seeDetails("+book.id+")")
         div.appendChild(img)
         div.appendChild(about)

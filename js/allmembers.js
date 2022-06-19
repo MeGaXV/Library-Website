@@ -17,9 +17,21 @@ for(i=0; i<list.length; i++){
         about.innerHTML = "Email: "+ member.innerText+ "<br/> First Name: "+member.nextElementSibling.nextElementSibling.innerText+"<br/> Last Name: "+ member.nextElementSibling.nextElementSibling.nextElementSibling.innerText
         
         var button = document.createElement("input")
+
         button.setAttribute("type","button")
         button.setAttribute("value","Read More")
         button.style.cursor = "pointer"
+        button.style.width="200px"
+        button.style.padding= "15px 0"
+        button.style.textAlign= "center"
+        button.style.margin= "20px 10px"
+        button.style.borderRadius= "25px"
+        button.style.fontWeight= "bold"
+        button.style.border= "2px solid #009688"
+        button.style.background= "transparent"
+        button.style.color= "white"
+        button.style.position= "relative"
+        button.style.backgroundColor="#009688"
         button.setAttribute("onclick","seeDetails("+member.id+")")
         div.appendChild(img)
         div.appendChild(about)
