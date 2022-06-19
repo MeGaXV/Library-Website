@@ -24,3 +24,4 @@ var title = document.getElementById("bookTitle")
 title.innerText=list[param.id-1].innerText
 var stock= document.getElementById("availability")
 stock.innerText="In Stock: "+list[param.id-1].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText
+document.getElementById("title").innerText=list[param.id-1].innerText
