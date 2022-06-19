@@ -11,8 +11,9 @@
                 <li><a href="all-books.html">All Books</a></li>
                 <li><a href="all-members.html">All Members</a></li>
                 <li><a href="search.html">Search</a></li>
-				<li><a href="sign-in.html">Sign In</a></li>
-                <li><a href="sign-up.html">Sign Up</a></li>
+				<li class="sign"><a href="sign-in.html">Sign In</a></li>
+                <li class="sign"><a href="sign-up.html">Sign Up</a></li>
+                <li class="Out"style="display: none; color: white; font-size: 16px; cursor: pointer; text-transform: uppercase;" onclick="signout()">Sign Out</li>
                </ul>
            </div>
 
@@ -21,8 +22,26 @@
                    All Members
                </h1>
            </div>
-           
-
         </div>
+        <script>
+            var signout = function()
+            {
+                sessionStorage.removeItem('MyemailList');
+                location.reload()
+            }
+            if(sessionStorage.getItem('MyemailList') === null){
+                console.log('email exist')
+            }
+            else{
+                var x = document.getElementsByClassName("sign")
+                for(var i =0; i < x.length; i++){
+                    x[i].style.display ="none"
+                }
+                var SignOut = document.getElementsByClassName("Out")
+                SignOut[0].style.display="inline"
+
+                
+            }
+        </script>
     </body>
 </html>

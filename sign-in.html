@@ -58,7 +58,7 @@
 		
 		<script>
 			function redi(){
-				location.replace("homepage.html")
+				location.href="homepage.html"
 			}
 			let email = [];
 			
@@ -76,7 +76,7 @@
 				console.warn('added' , {email} );
 
 				//saving to localStorage
-				localStorage.setItem('MyemailList', JSON.stringify(email) );
+				sessionStorage.setItem('MyemailList', JSON.stringify(email) );
 			}
 			document.addEventListener('DOMContentLoaded', ()=>{
 				document.getElementById('btn').addEventListener('click', addemail);
