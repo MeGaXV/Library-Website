@@ -20,7 +20,6 @@ for(i=0; i<list.length; i++){
         button.setAttribute("type","button")
         button.setAttribute("value","Read More")
         button.style.cursor = "pointer"
-        console.log(book.id)
         button.setAttribute("onclick","seeDetails("+book.id+")")
         div.appendChild(img)
         div.appendChild(about)

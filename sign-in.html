@@ -5,7 +5,28 @@
 	<title>Library Sign In Page</title>
 	<link rel="stylesheet" href="style-sign-in-&-up.css">
     <link rel="stylesheet" href="style.css">
-    
+    <ul style="display:none">
+		<li id="u1">mohamed@gmail.com</li>
+		<li>password1</li>
+		<li>Mohamed</li>
+		<li>Ashraf</li>
+		<li id="u2">youssef@gmail.com</li>
+		<li>password2</li>
+		<li>Youssef</li>
+		<li>Hany</li>
+		<li id="u3">mohamedsayed@gmail.com</li>
+		<li>password3</li>
+		<li>Mohamed</li>
+		<li>Sayed</li>
+		<li id="u4">mahmoud@gmail.com</li>
+		<li>password4</li>
+		<li>Mahmoud</li>
+		<li>Mourad</li>
+		<li id="u5">abdelrahman@gmail.com</li>
+		<li>password5</li>
+		<li>Abdel-Rahman</li>
+		<li>Megahed</li>
+	</ul>
 </head>
 <body>
 	<div class="bann">
@@ -27,20 +48,20 @@
 					<p style="color: #333;">Sign in to our library</p>
 				</div>
 				<form>
-					
+					<div id="invalid"style="color:red;text-align:center; display:none" >The input entered is invalid</div>
 				<div class="input_field">
-					<label>email address</label>
+					<label>Email Address</label>
 					<input type="email" class="input" placeholder="email" id="email" required>
 				</div>
 				<div class="input_field">
 					<label>Password</label>
-					<input type="password" class="input"placeholder="Password" required>
+					<input type="password" id="password" class="input"placeholder="Password" required>
 				</div>
 				<div>
 					<a href="#" class="forgot">Forgot password?</a>
 				</div>
 				<div class="btn">
-					<input type="submit" value="Sign in" class="sign_btn" id="btn" onclick="redi()">
+					<input type="button" value="Sign in" class="sign_btn" id="btn" onclick="addemail()">
 					<p><br><br></p>
 					</a>
 				</div>
@@ -62,25 +83,41 @@
 			}
 			let email = [];
 			
-			const addemail = (ev)=>{
-				ev.preventDefault();  //to stop the form submitting
-				let email = {
-					
-					email: document.getElementById('email').value,
+			var addemail = function() {
+				var invalid=document.getElementById("invalid")
+				invalid.style.display="none"
+				let email= document.getElementById('email').value
+				var verified=false
+				var elist= document.querySelectorAll("li[id]")
+				
+				for(var i=0;i<elist.length;i++){
+					if(email== elist[i].innerText){
+						var password = document.getElementById('password').value
+						if (password==elist[i].nextElementSibling.innerText){
+							verified=true
+						}
+					}
+				}
+
+				console.log(verified)
+				
+				setTimeout(()=>{},5000)
+				if (verified==true){
+					document.forms[0].reset(); // to clear the form for the next entries
+					//document.querySelector('form').reset();
+	
+					console.warn('added' , {email} );
+
+					//saving to localStorage
+					sessionStorage.setItem('MyemailList', email );
+					redi()
+				}
+				else{
+					invalid.style.display="block"
 					
 				}
-				
-				document.forms[0].reset(); // to clear the form for the next entries
-				//document.querySelector('form').reset();
-	
-				console.warn('added' , {email} );
 
-				//saving to localStorage
-				sessionStorage.setItem('MyemailList', JSON.stringify(email) );
 			}
-			document.addEventListener('DOMContentLoaded', ()=>{
-				document.getElementById('btn').addEventListener('click', addemail);
-			});
 			
 		</script>
 		</body>
