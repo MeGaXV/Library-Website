@@ -171,10 +171,8 @@
     </div>
     <div id="details">
         <div id="image">
-            <img src="media/cover.jpg" id="cover"/>
+            <img id="cover"/>
             <div id="authpub">
-                Author: Insert very long name here <br/>
-                Publisher: Not a good publisher
             </div>
             
         </div>
@@ -184,14 +182,10 @@
             <div class="text" id="abs">
                 Abstract:
                 <div id="abstract">
-                Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
                 </div>
                 <div id="availability">
-                    In Stock: Yes
+                    
                 </div>
             </div>
         </div>
@@ -201,7 +195,7 @@
         var signout = function()
             {
                 sessionStorage.removeItem('MyemailList');
-                location.href="homepage.html"
+                location.href="book-details.html?"+location.
             }
             if(sessionStorage.getItem('MyemailList') === null){
                 console.log('email exist')
