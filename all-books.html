@@ -184,11 +184,12 @@
     </div>
     
     </body>
-    <script src="js/allbooks.js">
+    <script src="js/allbooks.js"></script>
+    <script>
         var signout = function()
             {
                 sessionStorage.removeItem('MyemailList');
-                location.reload()
+                location.href="homepage.html"
             }
             if(sessionStorage.getItem('MyemailList') === null){
                 console.log('email exist')

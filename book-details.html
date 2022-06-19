@@ -195,11 +195,12 @@
             </div>
         </div>
     </div>
-    <script src="js/bookd.js">
+    <script src="js/bookd.js"></script>
+    <script>
         var signout = function()
             {
                 sessionStorage.removeItem('MyemailList');
-                location.reload()
+                location.href="homepage.html"
             }
             if(sessionStorage.getItem('MyemailList') === null){
                 console.log('email exist')

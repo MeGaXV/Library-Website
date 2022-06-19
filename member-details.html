@@ -30,7 +30,7 @@
         var signout = function()
             {
                 sessionStorage.removeItem('MyemailList');
-                location.reload()
+                location.href="homepage.html"
             }
             if(sessionStorage.getItem('MyemailList') === null){
                 console.log('email exist')
