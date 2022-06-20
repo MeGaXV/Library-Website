@@ -2,6 +2,11 @@ var list = document.querySelectorAll('li[id]')
 var seeDetails= function(id){
     location.href="book-details.html?id="+ id
 }
+var Remove = function(id){
+    var listdel = document.getElementsByClassName("details")
+    var intid = parseInt(id)
+    listdel[id-1].style.display = "none"
+}
 var dlist= document.getElementById("list")
 var searchParam = window.location.search.replace("?q=", "").replaceAll("%20", " ").toLowerCase()
 for(i=0; i<list.length; i++){
@@ -35,6 +40,25 @@ for(i=0; i<list.length; i++){
         div.appendChild(img)
         div.appendChild(about)
         div.appendChild(button)
+        if (sessionStorage.getItem("MyemailList")=="mohamed@gmail.com"){
+            var delbutton = document.createElement("input")
+            delbutton.setAttribute("type","button")
+            delbutton.setAttribute("value","Remove")
+            delbutton.style.cursor = "pointer"
+            delbutton.style.width="200px"
+            delbutton.style.padding= "15px 0"
+            delbutton.style.textAlign= "center"
+            delbutton.style.margin= "20px 10px"
+            delbutton.style.borderRadius= "25px"
+            delbutton.style.fontWeight= "bold"
+            delbutton.style.border= "2px solid #009688"
+            delbutton.style.background= "transparent"
+            delbutton.style.color= "white"
+            delbutton.style.position= "relative"
+            delbutton.style.backgroundColor="#009688"
+            delbutton.setAttribute("onClick","Remove("+book.id+")")
+            div.appendChild(delbutton)
+        }
         dlist.appendChild(div)
     }
 }

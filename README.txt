@@ -1,7 +1,7 @@
 In our project there are some pages that require the user to be logged in to be viewed.
 
 List of users:
-User 1: Mohamed Ashraf
+User 1: Mohamed Ashraf ------> The ADMIN User
 {
 	Email: mohamed@gmail.com
 	Password: password1
