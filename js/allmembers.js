@@ -1,5 +1,6 @@
 var list = document.querySelectorAll('li[id]')
 var seeDetails= function(id){
+    console.log(id)
     location.href="member-details.html?id="+ id
 }
 var dlist= document.getElementById("list")
@@ -11,10 +12,10 @@ for(i=0; i<list.length; i++){
         div.className="details"
         var img= document.createElement('div')
         img.className="image"
-        img.innerHTML="<img src="+member.nextElementSibling.innerText+" class='cover'/>"
+        img.innerHTML="<img src='media/user-icon.png' class='cover'/>"
         var about = document.createElement("div")
         about.className="authpub"
-        about.innerHTML = "Email: "+ member.innerText+ "<br/> First Name: "+member.nextElementSibling.nextElementSibling.innerText+"<br/> Last Name: "+ member.nextElementSibling.nextElementSibling.nextElementSibling.innerText
+        about.innerHTML = "First Name: "+member.nextElementSibling.nextElementSibling.innerText+"<br/> Last Name: "+ member.nextElementSibling.nextElementSibling.nextElementSibling.innerText
         
         var button = document.createElement("input")
 

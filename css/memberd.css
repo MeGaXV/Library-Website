@@ -25,6 +25,15 @@
     
 }
 
+#image{
+    min-width:fit-content;
+    height: auto;
+    float:left
+
+}
+#cover{
+    width:300px;
+}
 .text{
     display: flex;
     flex-direction: column;
@@ -34,8 +43,8 @@
 
 
 #mdet{
-    text-align: center;
     font-family: 'Times New Roman', Times, serif;
+   
 }
 body{
     width: 100%;
