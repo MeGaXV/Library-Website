@@ -104,11 +104,11 @@
 				setTimeout(()=>{},5000)
 				if (verified==true){
 					document.forms[0].reset(); // to clear the form for the next entries
-					//document.querySelector('form').reset();
+					
 	
 					console.warn('added' , {email} );
 
-					//saving to localStorage
+					//saving to sessionStorage
 					sessionStorage.setItem('MyemailList', email );
 					redi()
 				}
