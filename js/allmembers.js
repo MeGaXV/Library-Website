@@ -12,7 +12,7 @@ for(i=0; i<list.length; i++){
         div.className="details"
         var img= document.createElement('div')
         img.className="image"
-        img.innerHTML="<img src='media/user-icon.png' class='cover'/>"
+        img.innerHTML="<img src='media/user-icon.jpg' class='cover'/>"
         var about = document.createElement("div")
         about.className="authpub"
         about.innerHTML = "First Name: "+member.nextElementSibling.nextElementSibling.innerText+"<br/> Last Name: "+ member.nextElementSibling.nextElementSibling.nextElementSibling.innerText

@@ -18,7 +18,7 @@
                 <a href="homepage.html"><img src="logo.png" class="logo"></a>
                 <ul>
                 <li><a href="all-books.html">All Books</a></li>
-                <li><a href="all-members.html">All Members</a></li>
+                <li  class="Out"style="display: none;"><a href="all-members.html">All Members</a></li>
                 <li><a href="search.html">Search</a></li>
                 <li class="sign"><a href="sign-in.html">Sign In</a></li>
                 <li class="sign"><a href="sign-up.html">Sign Up</a></li>
@@ -59,7 +59,9 @@
                     x[i].style.display ="none"
                 }
                 var SignOut = document.getElementsByClassName("Out")
-                SignOut[0].style.display="inline"
+                for (var i=0;i<SignOut.length;i++){
+                    SignOut[i].style.display="inline"
+                }
 
                 
             }
