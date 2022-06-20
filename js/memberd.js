@@ -9,6 +9,10 @@ for (var i =0;i<list.length;i++){
         var det= document.getElementById("mdet")
         var mname = list[i].nextElementSibling.nextElementSibling.innerText+list[i].nextElementSibling.nextElementSibling.nextElementSibling.innerText
         var email = list[i].innerText
-        det.innerHTML="Name: "+ mname + "<br/> Email: "+ email
+        
+        
+        det.innerHTML="Name: "+ mname + "<br/> Email: "+ email 
     }
 }
+ 
+
