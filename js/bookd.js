@@ -1,12 +1,4 @@
-var bookUrl= "https://www.googleapis.com/books/v1/volumes?q="
-var output= document.getElementById("details");
-$.ajax({
-    url: bookUrl+"harry potter",
-    dataType: "json",
-    success: function(res){
-        console.log(res)
-    }
-})
+
 var params = location.search.substring(1).split("&")
 var param={"id":""}
 param.id=parseInt(params[0].split("=")[1])
@@ -25,3 +17,10 @@ title.innerText=list[param.id-1].innerText
 var stock= document.getElementById("availability")
 stock.innerText="In Stock: "+list[param.id-1].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText
 document.getElementById("title").innerText=list[param.id-1].innerText
+var dateb= document.getElementById("Dateb")
+var dater= document.getElementById("Dater")
+dateb.innerHTML=list[param.id-1].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText
+dater.innerHTML=list[param.id-1].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText
+var rev = document.getElementById("Reviews")
+var temp= list[param.id-1].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerText.split(":")
+rev.innerHTML="<em>"+temp[0]+"</em>: <q>"+temp[1]+"</q>"

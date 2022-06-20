@@ -23,6 +23,8 @@
     display: flex;
     padding: 10px;
     font-family: Calibri;
+    height: auto;
+    min-height: fit-content;
     
 }
 #image{

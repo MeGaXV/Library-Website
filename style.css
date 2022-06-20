@@ -22,6 +22,7 @@
     padding: 10px;
     font-family: Calibri;
     text-align: center;
+    min-height: fit-content;
 }
 .cover{
     width:300px;
